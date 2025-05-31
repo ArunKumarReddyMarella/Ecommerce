@@ -33,19 +33,31 @@ def parse_product_data(product):
     discounted_price = float(discounted_price_str) if discounted_price_str else 0
     images = product.get('image')
     image = json.dumps(json.loads(images)) if images else "[]"
-    image = image.replace('\"','')
+    # image = image.replace('\"','')
+    print(image)
 
     is_FK_Advantage_product = product.get('is_FK_Advantage_product') == "TRUE"
     description = product.get('description')
     product_rating = product.get('product_rating')
     overall_rating = product.get('overall_rating')
     brand = product.get('brand')
-    product_specifications = product.get('product_specifications')
+    product_specifications = product.get('product_specifications').replace('\"','').strip()
+    # print(product_specifications.strip())
 
+    product_specifications_str = product.get("product_specifications", "")
+    if product_specifications_str:
+        try:
+            product_specifications = json.loads(product_specifications_str)
+            product_specification_list = product_specifications.get("product_specification", [])
+        except json.JSONDecodeError:
+            product_specification_list = []
+    else:
+        product_specification_list = []
+    product_specification_list = json.dumps(product_specification_list)
     return (
         product_id, crawl_timestamp, product_url, product_name, product_category_tree, pid,
         retail_price, discounted_price, image, is_FK_Advantage_product, description,
-        product_rating, overall_rating, brand, product_specifications,
+        product_rating, overall_rating, brand, product_specification_list,
         0,  # Assuming stock quantity as 0
         'pcs',  # Assuming quantity unit as pieces
         datetime.now()  # Current timestamp for created_at
@@ -66,7 +78,7 @@ def process_product_data(file_path):
     """Load, parse, and insert product data into the database."""
     data = load_json_file(file_path)
     host='localhost'
-    database='ecommerce'
+    database='ecommerce_mapping'
     user='root'
     password='drowssap'
     connection = connect_to_database(host,database,user,password)
@@ -74,7 +86,7 @@ def process_product_data(file_path):
     
     for count, product in enumerate(data, start=1):
         print(count)
-        print(product.get('product_name'))
+        print(product.get('uniq_id'))
         product_data = parse_product_data(product)
         insert_product_data(cursor, product_data)
 

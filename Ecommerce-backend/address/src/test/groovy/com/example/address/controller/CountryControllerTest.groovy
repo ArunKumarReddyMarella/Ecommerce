@@ -77,8 +77,8 @@ class CountryControllerTest extends Specification {
         def countryId = "1234"
 
         when:
-        countryService.getCountryById(countryId) >> {throw new CountryNotFoundException("Country not found with ID: $countryId")}
         ResponseEntity<Country> response = countryController.getCountryById(countryId)
+        countryService.getCountryById(countryId) >> {throw new CountryNotFoundException("Country not found with ID: $countryId")}
 
         then:
         1 * countryService.getCountryById(countryId)
@@ -120,9 +120,10 @@ class CountryControllerTest extends Specification {
 
         when:
         ResponseEntity<Country> response = countryController.updateCountry(countryId, country)
+        countryService.updateCountry(country) >> { throw new CountryNotFoundException("Country not found with ID: $countryId") }
 
         then:
-        1 * countryService.updateCountry(country) >> { throw new CountryNotFoundException("Country not found with ID: $countryId") }
+        1 * countryService.updateCountry(country)
         response.statusCode == HttpStatus.NOT_FOUND
     }
 
@@ -137,7 +138,7 @@ class CountryControllerTest extends Specification {
         ResponseEntity<Country> response = countryController.patchCountry(countryId, updates)
 
         then:
-        1 * countryService.getCountryById(countryId) >> updatedCountry
+        2 * countryService.getCountryById(countryId) >> updatedCountry
         1 * countryService.patchCountry(countryId, updates)
         response.statusCode == HttpStatus.OK
         response.body == updatedCountry
@@ -151,9 +152,9 @@ class CountryControllerTest extends Specification {
 
         when:
         ResponseEntity<Country> response = countryController.patchCountry(countryId, updates)
-
+        countryService.getCountryById(countryId) >> { throw new CountryNotFoundException("Country not found with ID: $countryId") }
         then:
-        1 * countryService.getCountryById(countryId) >> { throw new CountryNotFoundException("Country not found with ID: $countryId") }
+        1 * countryService.getCountryById(countryId)
         response.statusCode == HttpStatus.NOT_FOUND
     }
 
