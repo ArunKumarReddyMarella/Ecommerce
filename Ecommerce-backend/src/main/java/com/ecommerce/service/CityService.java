@@ -1,7 +1,7 @@
 package com.ecommerce.service;
 
-import com.example.address.entity.Address;
-import com.example.address.entity.City;
+import com.ecommerce.entities.Address;
+import com.ecommerce.entities.City;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

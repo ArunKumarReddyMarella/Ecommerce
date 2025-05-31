@@ -1,8 +1,8 @@
 package com.ecommerce.controller;
 
-import com.example.address.entity.Address;
-import com.example.address.entity.City;
-import com.example.address.service.CityService;
+import com.ecommerce.entities.Address;
+import com.ecommerce.entities.City;
+import com.ecommerce.service.CityService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

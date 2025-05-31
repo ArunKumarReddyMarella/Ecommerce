@@ -1,7 +1,6 @@
 package com.ecommerce.service;
 
-import com.ecommerce.user.dto.OrderedProduct;
-import com.ecommerce.user.entity.User;
+import com.ecommerce.entities.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.rating.entity.Rating;
-import com.ecommerce.rating.exception.RatingAlreadyExistsException;
-import com.ecommerce.rating.exception.RatingNotFoundException;
-import com.ecommerce.rating.repository.RatingRepository;
-import com.ecommerce.rating.service.RatingService;
+import com.ecommerce.entities.Rating;
+import com.ecommerce.exception.RatingAlreadyExistsException;
+import com.ecommerce.exception.RatingNotFoundException;
+import com.ecommerce.repository.RatingRepository;
+import com.ecommerce.service.RatingService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

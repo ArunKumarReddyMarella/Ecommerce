@@ -25,7 +25,9 @@ public class Invoice {
     private String invoiceId;
 
     @NotBlank(message = "Transaction ID cannot be blank")
-    private String transactionId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "transaction_id", nullable = false)
+    private Transaction transaction;
 
     @NotNull(message = "Payment amount cannot be null")
     @DecimalMin(value = "0.0", inclusive = false, message = "Payment amount must be greater than zero")

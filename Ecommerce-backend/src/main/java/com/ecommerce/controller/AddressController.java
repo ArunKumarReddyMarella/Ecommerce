@@ -1,7 +1,7 @@
 package com.ecommerce.controller;
 
-import com.example.address.entity.Address;
-import com.example.address.service.AddressService;
+import com.ecommerce.entities.Address;
+import com.ecommerce.service.AddressService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

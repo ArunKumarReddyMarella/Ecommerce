@@ -1,6 +1,6 @@
 package com.ecommerce.service;
 
-import com.ecommerce.invoice.entity.Invoice;
+import com.ecommerce.entities.Invoice;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

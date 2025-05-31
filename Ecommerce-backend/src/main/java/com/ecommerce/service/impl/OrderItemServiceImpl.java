@@ -1,9 +1,9 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.order.entity.OrderItem;
-import com.ecommerce.order.exception.OrderItemAlreadyExistsException;
-import com.ecommerce.order.repository.OrderItemRepository;
-import com.ecommerce.order.service.OrderItemService;
+import com.ecommerce.entities.OrderItem;
+import com.ecommerce.exception.OrderItemAlreadyExistsException;
+import com.ecommerce.repository.OrderItemRepository;
+import com.ecommerce.service.OrderItemService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.transaction.Transactional;

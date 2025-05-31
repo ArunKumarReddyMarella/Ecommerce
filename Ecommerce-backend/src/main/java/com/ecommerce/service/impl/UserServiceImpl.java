@@ -1,13 +1,12 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.order.service.OrderService;
-import com.ecommerce.user.dto.OrderedProduct;
-import com.ecommerce.user.entity.User;
-import com.ecommerce.order.entity.OrderItem;
-import com.ecommerce.user.exception.UserAlreadyExistsException;
-import com.ecommerce.user.exception.UserNotFoundException;
-import com.ecommerce.user.repository.UserRepository;
-import com.ecommerce.user.service.UserService;
+import com.ecommerce.entities.Order;
+import com.ecommerce.entities.User;
+import com.ecommerce.exception.UserAlreadyExistsException;
+import com.ecommerce.exception.UserNotFoundException;
+import com.ecommerce.repository.UserRepository;
+import com.ecommerce.service.OrderService;
+import com.ecommerce.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

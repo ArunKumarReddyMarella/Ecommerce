@@ -1,12 +1,12 @@
-package com.ecommerce.Service.impl;
+package com.ecommerce.service.impl;
 
 //import com.ecommerce.common.service.ExportService;
 
-import com.ecommerce.product.Entity.Product;
-import com.ecommerce.product.Repository.ProductRepository;
-import com.ecommerce.product.Service.ProductService;
-import com.ecommerce.product.exception.ProductAlreadyExistsException;
-import com.ecommerce.product.exception.ProductNotFoundException;
+import com.ecommerce.entities.Product;
+import com.ecommerce.exception.ProductAlreadyExistsException;
+import com.ecommerce.exception.ProductNotFoundException;
+import com.ecommerce.repository.ProductRepository;
+import com.ecommerce.service.ProductService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;

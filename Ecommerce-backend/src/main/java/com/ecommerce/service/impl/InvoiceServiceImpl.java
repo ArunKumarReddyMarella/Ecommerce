@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.invoice.entity.Invoice;
-import com.ecommerce.invoice.exception.InvoiceAlreadyExistsException;
-import com.ecommerce.invoice.exception.InvoiceNotFoundException;
-import com.ecommerce.invoice.repository.InvoiceRepository;
-import com.ecommerce.invoice.service.InvoiceService;
+import com.ecommerce.entities.Invoice;
+import com.ecommerce.exception.InvoiceAlreadyExistsException;
+import com.ecommerce.exception.InvoiceNotFoundException;
+import com.ecommerce.repository.InvoiceRepository;
+import com.ecommerce.service.InvoiceService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

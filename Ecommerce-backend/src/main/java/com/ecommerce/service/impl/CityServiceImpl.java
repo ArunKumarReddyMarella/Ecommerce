@@ -1,13 +1,13 @@
 package com.ecommerce.service.impl;
 
-import com.example.address.entity.Address;
-import com.example.address.entity.City;
-import com.example.address.entity.Country;
-import com.example.address.exception.CityAlreadyExistsException;
-import com.example.address.exception.CityNotFoundException;
-import com.example.address.repository.CityRepository;
-import com.example.address.service.CityService;
-import com.example.address.service.CountryService;
+import com.ecommerce.entities.Address;
+import com.ecommerce.entities.City;
+import com.ecommerce.entities.Country;
+import com.ecommerce.exception.CityAlreadyExistsException;
+import com.ecommerce.exception.CityNotFoundException;
+import com.ecommerce.repository.CityRepository;
+import com.ecommerce.service.CityService;
+import com.ecommerce.service.CountryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

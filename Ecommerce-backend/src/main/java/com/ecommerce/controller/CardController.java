@@ -1,7 +1,8 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.card.entity.Card;
-import com.ecommerce.card.service.CardService;
+
+import com.ecommerce.entities.Card;
+import com.ecommerce.service.CardService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

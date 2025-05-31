@@ -1,7 +1,7 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.rating.entity.Rating;
-import com.ecommerce.rating.service.RatingService;
+import com.ecommerce.entities.Rating;
+import com.ecommerce.service.RatingService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

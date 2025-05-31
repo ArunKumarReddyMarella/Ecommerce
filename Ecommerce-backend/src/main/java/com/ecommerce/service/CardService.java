@@ -1,6 +1,6 @@
 package com.ecommerce.service;
 
-import com.ecommerce.card.entity.Card;
+import com.ecommerce.entities.Card;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

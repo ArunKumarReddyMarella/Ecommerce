@@ -24,10 +24,14 @@ public class Transaction {
     private String transactionId;
 
     @NotBlank(message = "Order ID cannot be blank")
-    private String orderId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id", nullable = false)
+    private Order order;
 
     @NotBlank(message = "Card ID cannot be blank")
-    private String cardId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "card_id", nullable = false)
+    private Card card;
 
     @NotNull(message = "Amount cannot be null")
     @DecimalMin(value = "0.0", inclusive = false, message = "Amount must be greater than zero")

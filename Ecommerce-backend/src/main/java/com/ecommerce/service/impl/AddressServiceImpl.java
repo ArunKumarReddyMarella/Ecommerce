@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.example.address.entity.Address;
-import com.example.address.exception.AddressAlreadyExistsException;
-import com.example.address.exception.AddressNotFoundException;
-import com.example.address.repository.AddressRepository;
-import com.example.address.service.AddressService;
+import com.ecommerce.entities.Address;
+import com.ecommerce.exception.AddressAlreadyExistsException;
+import com.ecommerce.exception.AddressNotFoundException;
+import com.ecommerce.repository.AddressRepository;
+import com.ecommerce.service.AddressService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

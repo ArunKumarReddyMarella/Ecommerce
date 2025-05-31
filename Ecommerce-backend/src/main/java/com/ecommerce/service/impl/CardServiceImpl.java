@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.card.entity.Card;
-import com.ecommerce.card.exception.CardAlreadyExistsException;
-import com.ecommerce.card.exception.CardNotFondException;
-import com.ecommerce.card.repository.CardRepository;
-import com.ecommerce.card.service.CardService;
+import com.ecommerce.entities.Card;
+import com.ecommerce.exception.CardAlreadyExistsException;
+import com.ecommerce.exception.CardNotFondException;
+import com.ecommerce.repository.CardRepository;
+import com.ecommerce.service.CardService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

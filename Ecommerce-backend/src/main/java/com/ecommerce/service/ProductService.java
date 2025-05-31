@@ -1,8 +1,7 @@
-package com.ecommerce.Service;
+package com.ecommerce.service;
 
-import com.ecommerce.product.Entity.Product;
-import com.ecommerce.product.bean.ProductExportBean;
-import jakarta.validation.Valid;
+
+import com.ecommerce.entities.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

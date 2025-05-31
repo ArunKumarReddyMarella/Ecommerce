@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,7 +33,7 @@ public class Cart {
 
     @Column(nullable = false) // Ensures the column in the DB cannot be null
     @NotBlank(message = "Product ID cannot be blank") // Validates that productId is not null or empty
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
     private List<Product> products;
 

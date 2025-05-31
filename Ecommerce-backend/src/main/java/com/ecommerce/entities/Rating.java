@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -26,7 +27,9 @@ public class Rating {
     private String userId;
 
     @NotBlank(message = "Product ID cannot be blank")
-    private String productId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 
     @NotNull(message = "Rating cannot be null")
     @Min(value = 1, message = "Rating must be at least 1")
@@ -36,5 +39,9 @@ public class Rating {
     private String review;
 
     @CreationTimestamp
+    @Column(updatable = false)
     private Timestamp createdAt;
+
+    @UpdateTimestamp
+    private Timestamp lastUpdate;
 }

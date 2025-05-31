@@ -1,6 +1,6 @@
 package com.ecommerce.repository;
 
-import com.ecommerce.card.entity.Card;
+import com.ecommerce.entities.Card;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

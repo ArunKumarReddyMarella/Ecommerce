@@ -1,10 +1,10 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.order.dto.OrderDataDto;
-import com.ecommerce.order.entity.Order;
-import com.ecommerce.order.entity.OrderItem;
-import com.ecommerce.order.service.OrderItemService;
-import com.ecommerce.order.service.OrderService;
+import com.ecommerce.dto.OrderDataDto;
+import com.ecommerce.entities.Order;
+import com.ecommerce.entities.OrderItem;
+import com.ecommerce.service.OrderItemService;
+import com.ecommerce.service.OrderService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

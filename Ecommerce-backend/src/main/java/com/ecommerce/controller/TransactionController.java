@@ -1,7 +1,7 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.transaction.entity.Transaction;
-import com.ecommerce.transaction.service.TransactionService;
+import com.ecommerce.entities.Transaction;
+import com.ecommerce.service.TransactionService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

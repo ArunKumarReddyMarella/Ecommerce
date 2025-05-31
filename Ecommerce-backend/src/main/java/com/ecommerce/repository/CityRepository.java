@@ -1,6 +1,6 @@
 package com.ecommerce.repository;
 
-import com.example.address.entity.City;
+import com.ecommerce.entities.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

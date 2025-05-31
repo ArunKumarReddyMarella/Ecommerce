@@ -1,6 +1,6 @@
 package com.ecommerce.repository;
 
-import com.ecommerce.invoice.entity.Invoice;
+import com.ecommerce.entities.Invoice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

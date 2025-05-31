@@ -1,8 +1,8 @@
 package com.ecommerce.controller;
 
-import com.example.address.entity.City;
-import com.example.address.entity.Country;
-import com.example.address.service.CountryService;
+import com.ecommerce.entities.City;
+import com.ecommerce.entities.Country;
+import com.ecommerce.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.cart.entity.Cart;
-import com.ecommerce.cart.exception.CartAlreadyExistsException;
-import com.ecommerce.cart.exception.CartNotFoundException;
-import com.ecommerce.cart.repository.CartRepository;
-import com.ecommerce.cart.service.CartService;
+import com.ecommerce.entities.Cart;
+import com.ecommerce.exception.CartAlreadyExistsException;
+import com.ecommerce.exception.CartNotFoundException;
+import com.ecommerce.repository.CartRepository;
+import com.ecommerce.service.CartService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

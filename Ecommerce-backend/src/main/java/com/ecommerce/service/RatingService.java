@@ -1,6 +1,6 @@
 package com.ecommerce.service;
 
-import com.ecommerce.rating.entity.Rating;
+import com.ecommerce.entities.Rating;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,8 +1,7 @@
 package com.ecommerce.service;
 
-import com.ecommerce.order.dto.OrderDataDto;
-import com.ecommerce.order.entity.Order;
-import com.ecommerce.order.entity.OrderItem;
+import com.ecommerce.dto.OrderDataDto;
+import com.ecommerce.entities.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

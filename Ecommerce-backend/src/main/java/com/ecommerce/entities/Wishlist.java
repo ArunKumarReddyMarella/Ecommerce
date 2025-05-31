@@ -25,7 +25,7 @@ public class Wishlist {
     @NotBlank(message = "User ID cannot be blank")
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private String userId;
+    private User user;
 
     @Column(nullable = false)
     @NotBlank(message = "Product ID cannot be blank")

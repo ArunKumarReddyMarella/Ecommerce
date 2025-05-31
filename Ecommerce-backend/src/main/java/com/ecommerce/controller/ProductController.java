@@ -1,8 +1,7 @@
-package com.ecommerce.Controller;
+package com.ecommerce.controller;
 
-import com.ecommerce.product.Entity.Product;
-import com.ecommerce.product.Service.ProductService;
-import com.ecommerce.product.bean.ProductExportBean;
+import com.ecommerce.entities.Product;
+import com.ecommerce.service.ProductService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

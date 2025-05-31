@@ -1,7 +1,7 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.invoice.entity.Invoice;
-import com.ecommerce.invoice.service.InvoiceService;
+import com.ecommerce.entities.Invoice;
+import com.ecommerce.service.InvoiceService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

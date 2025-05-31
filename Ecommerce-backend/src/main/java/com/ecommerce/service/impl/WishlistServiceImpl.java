@@ -1,10 +1,10 @@
 package com.ecommerce.service.impl;
 
-import com.ecommerce.wishlist.entity.Wishlist;
-import com.ecommerce.wishlist.exception.WishlistAlreadyExistsException;
-import com.ecommerce.wishlist.exception.WishlistNotFoundException;
-import com.ecommerce.wishlist.repository.WishlistRepository;
-import com.ecommerce.wishlist.service.WishlistService;
+import com.ecommerce.entities.Wishlist;
+import com.ecommerce.exception.WishlistAlreadyExistsException;
+import com.ecommerce.exception.WishlistNotFoundException;
+import com.ecommerce.repository.WishlistRepository;
+import com.ecommerce.service.WishlistService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

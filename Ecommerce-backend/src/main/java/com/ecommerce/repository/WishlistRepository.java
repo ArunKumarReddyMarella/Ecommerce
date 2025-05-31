@@ -1,6 +1,6 @@
 package com.ecommerce.repository;
 
-import com.ecommerce.wishlist.entity.Wishlist;
+import com.ecommerce.entities.Wishlist;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
