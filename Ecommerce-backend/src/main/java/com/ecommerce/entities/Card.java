@@ -33,7 +33,9 @@ public class Card {
     private Integer cvv;
 
     @Column(name = "user_id", length = 50, nullable = false)
-    private String userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name = "created_at")
     private Timestamp createdAt;

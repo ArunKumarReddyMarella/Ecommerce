@@ -26,11 +26,15 @@ public class Cart {
 
     @Column(nullable = false) // Ensures the column in the DB cannot be null
     @NotBlank(message = "User ID cannot be blank") // Validates that userId is not null or empty
-    private String userId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(nullable = false) // Ensures the column in the DB cannot be null
     @NotBlank(message = "Product ID cannot be blank") // Validates that productId is not null or empty
-    private String productId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", nullable = false)
+    private List<Product> products;
 
     @Column(nullable = false) // Ensures the column in the DB cannot be null
     @NotNull(message = "Quantity cannot be null") // Ensures that quantity is not null

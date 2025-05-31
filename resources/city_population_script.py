@@ -56,7 +56,7 @@ def insert_data_to_database(connection, data):
 def main():
     # Database connection parameters
     host = 'localhost'
-    database = 'ecommerce'
+    database = 'ecommerce_mapping'
     user = 'root'
     password = 'drowssap'
     

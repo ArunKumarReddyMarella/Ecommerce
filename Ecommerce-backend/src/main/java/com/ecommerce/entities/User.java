@@ -15,18 +15,19 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "user") // Assuming the table name is "users"
+@Table(name = "user")
 public class User {
 
     @Id
     private String userId;
-
     private String firstName;
     private String middleName;
     private String lastName;
     private String username;
     private String email;
-    private String addressId; // Assuming address_id references another table
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id")
+    private Address address;
     @Column(updatable = false) // Prevent accidental updates
     @CreationTimestamp
     private Timestamp createdAt;

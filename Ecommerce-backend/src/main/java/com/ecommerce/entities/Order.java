@@ -25,6 +25,8 @@ public class Order {
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "User ID cannot be blank")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", nullable = false)
     private String userId;
 
     @CreationTimestamp
@@ -35,10 +37,6 @@ public class Order {
     @NotNull(message = "Total amount cannot be null")
     @DecimalMin(value = "0.0", inclusive = false, message = "Total amount must be greater than zero")
     private BigDecimal totalAmount;
-
-//    @Column(nullable = false)
-//    @NotBlank(message = "Status cannot be blank")
-//    private String status;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING) // Store enum values as strings in DB

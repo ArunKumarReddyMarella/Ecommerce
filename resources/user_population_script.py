@@ -56,7 +56,7 @@ def insert_data_to_database(connection, data):
             row['last_name'],
             row['username'],
             row['email'],
-            row['address_id']+",",
+            row['address_id'],
             row['created_at'],
             row['last_update'],
         )
@@ -69,7 +69,7 @@ def insert_data_to_database(connection, data):
 def main():
     # Database connection parameters
     host = 'localhost'
-    database = 'ecommerce'
+    database = 'ecommerce_mapping'
     user = 'root'
     password = 'drowssap'
     
