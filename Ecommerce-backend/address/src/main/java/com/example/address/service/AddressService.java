@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Map;
 
 @Service
@@ -15,5 +16,7 @@ public interface AddressService {
     Address updateAddress(Address address);
     void patchAddress(String id, Map<String, Object> updates);
     void deleteAddress(String id);
+
+    Collection<Address> getAddressesByCity(String city_id);
 }
 

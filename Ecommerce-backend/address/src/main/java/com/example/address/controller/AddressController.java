@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.Map;
 
 @RestController
@@ -31,6 +32,13 @@ public class AddressController {
         Pageable pageable = PageRequest.of(page, size, sort);
 
         Page<Address> addresses = addressService.getAddresses(pageable);
+        return ResponseEntity.ok(addresses);
+    }
+
+    @GetMapping("/city/{city_id}")
+    public ResponseEntity<Collection<Address>> getAddressesByCityId(
+            @PathVariable String city_id){
+        Collection<Address> addresses = addressService.getAddressesByCity(city_id);
         return ResponseEntity.ok(addresses);
     }
 

@@ -1,10 +1,12 @@
 package com.example.address.service.impl;
 
 import com.example.address.entity.Address;
+import com.example.address.entity.City;
 import com.example.address.exception.AddressAlreadyExistsException;
 import com.example.address.exception.AddressNotFoundException;
 import com.example.address.repository.AddressRepository;
 import com.example.address.service.AddressService;
+import com.example.address.service.CityService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
@@ -24,6 +27,8 @@ public class AddressServiceImpl implements AddressService {
 
     @Autowired
     private AddressRepository addressRepository;
+    @Autowired
+    private CityService cityService;
 
     @Override
     public Page<Address> getAddresses(Pageable pageable) {
@@ -81,6 +86,12 @@ public class AddressServiceImpl implements AddressService {
             throw new AddressNotFoundException("Address not found with ID: " + id);
         }
         addressRepository.deleteById(id);
+    }
+
+    @Override
+    public Collection<Address> getAddressesByCity(String city_id) {
+        City city = cityService.getCityById(city_id);
+        return city.getAddresses();
     }
 }
 
